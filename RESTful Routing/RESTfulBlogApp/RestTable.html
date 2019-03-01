@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RESTful Routes Table</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    </head>
+    <body>
+        <div class="ui main container segment">
+            <div class="ui raised  segment">
+            <h1 class="ui huge header">Restful Routes Table Page</h1>
+            <h2 class="ui small header">The 7 RESTful Routes</h2>
+            </div>
+            
+            <div class="ui raised segment">
+                <table class="ui selectable celled table">
+                    <thead>
+                        <tr>
+                            <th>Route Name</th>
+                            <th>URL</th>
+                            <th>Http Verb</th>
+                            <th>Purpose</th>
+                            <th>Mongoose Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Index</td>
+                            <td>/dogs</td>
+                            <td>GET</td>
+                            <td>list all dogs</td>
+                            <td>Dog.find()</td>
+                        </tr>
+                        <tr class="positive">
+                            <td class>New</td>
+                            <td>/dogs/new</td>
+                            <td>GET</td>
+                            <td>Show new dogs form</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr class="positive">
+                            <td>Create</td>
+                            <td>/dogs</td>
+                            <td>POST</td>
+                            <td>Create a new dog, then redirect somewhere</td>
+                            <td>Dog.create()</td>
+                        </tr>
+                        <tr>
+                            <td>Show</td>
+                            <td>/dogs/:id</td>
+                            <td>GET</td>
+                            <td>Shows info about one specific dog </td>
+                            <td>Dog.findById()</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>Edit</td>
+                            <td>/dogs/:id/edit</td>
+                            <td>GET</td>
+                            <td>Show edit form for a dog</td>
+                            <td>Dog.findById()</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>Update</td>
+                            <td>/dogs/:id</td>
+                            <td>PUT</td>
+                            <td>Make changes to a dog and redirect</td>
+                            <td>Dog.findByIdAndUpdate()</td>
+                        </tr>
+                        <tr class="negative">
+                            <td>Delete</td>
+                            <td>/dogs/:id</td>
+                            <td>DELETE</td>
+                            <td>Delete a dog and redirect</td>
+                            <td>Dog.findByIdAndRemove</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+npm{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "assignment json for webdevbootcamp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "laura fretter",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

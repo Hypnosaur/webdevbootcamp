@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Dog</div>
+    <form class="ui form" action="/dogs" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="dog[title]" placeholder="Dog type">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="dog[image]" placeholder="Dog picture">
+        </div>
+        <div class="field">
+            <label>Dog Content</label>
+            <textarea name="dog[body]"></textarea>
+        </div>
+        <input class="ui red button" type="submit">
+    </form>
+</div>
+
+<% include ./partials/footer %>

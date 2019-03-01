@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header"><%=dog.title%></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="ui centered round image">
+                <img src=" <%= dog.image %>">
+            </div>
+            <div class="content">
+                <span><%= dog.created.toDateString() %></span>
+            </div>
+            <div class="description">
+                    <p><%- dog.body %></p>
+            </div>
+            <a class="ui floated basic violet button" href="/dogs/<%= dog._id %>/edit">edit</a>
+            <form id="delete" action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>
